@@ -184,11 +184,8 @@ java -cp "bin:lib/*" banksystem.BankSystem
 
 
 ### 4. 관리자 로그인 후 메뉴
-```
-✅ 계좌관리        ✅ 이자관리        ✅ 시스템관리        ✅ 기타
-1. 전체계좌조회    3. 수동이자지급    5. 스케줄러상태      6. 로그아웃
-2. 사용자별계좌조회 4. 이자지급내역조회 0. 종료
-```
+<img width="583" height="122" alt="image" src="https://github.com/user-attachments/assets/465da68e-208a-4e6e-8360-350742a099eb" />
+
 
 ## 📁 프로젝트 구조
 
