@@ -79,10 +79,10 @@
 ## 🏗️ 시스템 구조
 
 ```
-┌───────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│  사용자 인터페이스 │    │   비즈니스 로직   │    │   데이터베이스   │
-│   (Terminal UI)   │◄──►│   (Managers)    │◄──►│   (Oracle DB)   │
-└───────────────────┘    └─────────────────┘    └─────────────────┘
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│사용자 인터페이스  │    │   비즈니스 로직 │    │   데이터베이스    │
+│   (Terminal UI) │◄──►│   (Managers)    │◄──►│   (Oracle DB)   │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
 ## 🛠️ 기술 스택
@@ -109,8 +109,8 @@
 
 ### 2. 프로젝트 클론
 ```bash
-git clone https://github.com/jhwwon/BankSystemProject.git
-cd BankSystemProject
+git clone https://github.com/yourusername/bank-system.git
+cd bank-system
 ```
 
 ### 3. 라이브러리 설정
@@ -173,50 +173,61 @@ java -cp "bin:lib/*" banksystem.BankSystem
 ### 2. 메인 메뉴
 ```
 -- 은행 계좌 관리 시스템 --
-<img width="522" height="575" alt="image" src="https://github.com/user-attachments/assets/fe6a715e-3163-4c12-8168-b5a77d65f895" />
+계좌 서비스를 이용하려면 로그인해주세요.
+✅ 자동 이자 지급: 다음 실행: 2024-01-31 14:00:00
 
+✅ 메인메뉴: 1.회원가입 | 2.사용자 로그인 | 3.관리자 로그인 | 4.종료
+```
 
 ### 3. 사용자 로그인 후 메뉴
-<img width="437" height="119" alt="image" src="https://github.com/user-attachments/assets/470bf2a3-a89f-4131-9762-68c2165de68a" />
-
+```
+✅ 계좌관리    ✅ 거래업무    ✅ 기타설정    ✅ 시스템
+1. 계좌생성    4. 입금       8. 계좌비밀번호변경   10. 로그아웃
+2. 계좌조회    5. 출금       9. 회원정보수정     0. 종료
+3. 계좌해지    6. 이체
+              7. 거래내역조회
+```
 
 ### 4. 관리자 로그인 후 메뉴
-<img width="583" height="122" alt="image" src="https://github.com/user-attachments/assets/465da68e-208a-4e6e-8360-350742a099eb" />
-
+```
+✅ 계좌관리        ✅ 이자관리        ✅ 시스템관리        ✅ 기타
+1. 전체계좌조회    3. 수동이자지급    5. 스케줄러상태      6. 로그아웃
+2. 사용자별계좌조회 4. 이자지급내역조회 0. 종료
+```
 
 ## 📁 프로젝트 구조
 
 ```
-bank-system/
-├── src/                    # 소스 코드
+BankSystemProject/
+├── src/                           # 소스 코드
 │   └── banksystem/
-│       ├── BankSystem.java         # 메인 클래스
-│       ├── entity/                 # 엔티티 클래스
+│       ├── BankSystem.java        # 메인 클래스
+│       ├── entity/                # 엔티티 클래스
 │       │   ├── User.java
 │       │   ├── Account.java
 │       │   ├── Transaction.java
 │       │   ├── InterestInfo.java
 │       │   └── InterestPayment.java
-│       ├── manager/                # 비즈니스 로직
+│       ├── manager/               # 비즈니스 로직
 │       │   ├── UserManager.java
 │       │   ├── AccountManager.java
 │       │   ├── TransactionManager.java
 │       │   ├── AdminManager.java
 │       │   └── SchedulerManager.java
-│       ├── helper/                 # 헬퍼 클래스
+│       ├── helper/                # 헬퍼 클래스
 │       │   ├── InputHelper.java
 │       │   └── ValidationHelper.java
-│       └── util/                   # 유틸리티
+│       └── util/                  # 유틸리티
 │           ├── BankUtils.java
 │           └── InterestCalculator.java
-├── bin/                            # 컴파일된 클래스
-├── lib/                            # 라이브러리
+├── bin/                           # 컴파일된 클래스
+├── lib/                           # 라이브러리
 │   ├── lombok-1.18.30.jar
 │   └── ojdbc8-21.9.0.0.jar
-├── sqls/                           # 데이터베이스 스크립트
+├── sqls/                          # 데이터베이스 스크립트
 │   └── banksystem.sql
-├── README.md                       # 프로젝트 문서
-└── LICENSE                         # 라이선스
+├── README.md                      # 프로젝트 문서
+└── LICENSE                        # 라이선스
 ```
 
 ## 📚 API 문서
@@ -272,7 +283,7 @@ bank-system/
 
 ## 📞 연락처
 
-프로젝트 링크: [https://github.com/jhwwon/BankSystemProject](ttps://github.com/jhwwon/BankSystemProject)
+프로젝트 링크: [https://github.com/yourusername/bank-system](https://github.com/yourusername/bank-system)
 
 ## 🙏 감사의 말
 
