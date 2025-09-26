@@ -180,13 +180,8 @@ java -cp "bin:lib/*" banksystem.BankSystem
 ```
 
 ### 3. 사용자 로그인 후 메뉴
-```
-✅ 계좌관리    ✅ 거래업무    ✅ 기타설정    ✅ 시스템
-1. 계좌생성    4. 입금       8. 계좌비밀번호변경   10. 로그아웃
-2. 계좌조회    5. 출금       9. 회원정보수정     0. 종료
-3. 계좌해지    6. 이체
-              7. 거래내역조회
-```
+<img width="437" height="119" alt="image" src="https://github.com/user-attachments/assets/470bf2a3-a89f-4131-9762-68c2165de68a" />
+
 
 ### 4. 관리자 로그인 후 메뉴
 ```
