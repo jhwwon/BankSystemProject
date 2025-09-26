@@ -283,7 +283,7 @@ bank-system/
 
 ## 📞 연락처
 
-프로젝트 링크: [https://github.com/yourusername/bank-system](https://github.com/yourusername/bank-system)
+프로젝트 링크: [https://github.com/jhwwon/BankSystemProject](ttps://github.com/jhwwon/BankSystemProject)
 
 ## 🙏 감사의 말
 
