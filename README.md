@@ -7,7 +7,7 @@
 [![Lombok](https://img.shields.io/badge/Lombok-1.18.30-pink.svg)](https://projectlombok.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## 📋 목차
+## 목차
 
 - [프로젝트 개요](#-프로젝트-개요)
 - [주요 기능](#-주요-기능)
@@ -18,25 +18,24 @@
 - [사용법](#-사용법)
 - [프로젝트 구조](#-프로젝트-구조)
 - [API 문서](#-api-문서)
-- [기여하기](#-기여하기)
 - [라이선스](#-라이선스)
 
-## 🎯 프로젝트 개요
+## 프로젝트 개요
 
 이 프로젝트는 Java를 사용하여 구현된 완전한 은행 계좌 관리 시스템입니다. 실제 은행의 핵심 기능들을 구현하여 사용자와 관리자 모두를 위한 포괄적인 서비스를 제공합니다.
 
 ### ✨ 핵심 특징
 
-- 🔐 **안전한 인증 시스템**: 사용자 및 관리자 로그인
-- 💰 **다양한 계좌 타입**: 보통예금, 정기예금, 적금
-- 🔄 **실시간 거래 처리**: 입금, 출금, 이체
-- 📊 **자동 이자 계산**: 매월 자동 이자 지급
-- 👨‍💼 **관리자 대시보드**: 전체 시스템 관리
-- 📈 **거래 내역 추적**: 상세한 거래 기록
+- **안전한 인증 시스템**: 사용자 및 관리자 로그인
+- **다양한 계좌 타입**: 보통예금, 정기예금, 적금
+- **실시간 거래 처리**: 입금, 출금, 이체
+- **자동 이자 계산**: 매월 자동 이자 지급
+- **관리자 대시보드**: 전체 시스템 관리
+- **거래 내역 추적**: 상세한 거래 기록
 
-## 🚀 주요 기능
+## 주요 기능
 
-### 👤 사용자 기능
+### 사용자 기능
 - **회원 관리**
   - 회원가입 및 로그인
   - 개인정보 수정
@@ -54,7 +53,7 @@
   - 거래 내역 조회
   - 실시간 잔액 확인
 
-### 👨‍💼 관리자 기능
+### 관리자 기능
 - **계좌 관리**
   - 전체 계좌 조회
   - 사용자별 계좌 조회
@@ -70,7 +69,7 @@
   - 시스템 로그 관리
   - 자동화 작업 관리
 
-### ⚙️ 자동화 기능
+### 자동화 기능
 - **스케줄러**
   - 매월 마지막 날 자동 이자 지급
   - 백그라운드 작업 처리
@@ -85,7 +84,7 @@
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
-## 🛠️ 기술 스택
+## 기술 스택
 
 ### Backend
 - **Java 11+** - 메인 프로그래밍 언어
@@ -100,70 +99,7 @@
 - **Maven/Gradle** - 의존성 관리 (선택사항)
 - **IDE** - IntelliJ IDEA, Eclipse, VS Code
 
-## 📦 설치 및 실행
-
-### 1. 사전 요구사항
-- Java 11 이상
-- Oracle Database 11g 이상
-- Oracle JDBC Driver
-
-### 2. 프로젝트 클론
-```bash
-git clone https://github.com/yourusername/bank-system.git
-cd bank-system
-```
-
-### 3. 라이브러리 설정
-`lib/` 폴더에 다음 JAR 파일들을 배치하세요:
-- `lombok-1.18.30.jar`
-- `ojdbc8-21.9.0.0.jar`
-
-### 4. 컴파일
-```bash
-# src 폴더로 이동
-cd src
-
-# Java 파일 컴파일
-javac -cp "../lib/*" banksystem/*.java banksystem/*/*.java
-
-# 컴파일된 클래스 파일을 bin 폴더로 이동
-mkdir -p ../bin
-cp -r banksystem ../bin/
-```
-
-### 5. 실행
-```bash
-# 프로젝트 루트에서 실행
-java -cp "bin:lib/*" banksystem.BankSystem
-```
-
-## 🗄️ 데이터베이스 설정
-
-### 1. Oracle Database 설치
-Oracle Database 11g 이상 버전을 설치하세요.
-
-### 2. 데이터베이스 생성
-```sql
--- 사용자 생성
-CREATE USER jhw1 IDENTIFIED BY 1234;
-GRANT CONNECT, RESOURCE TO jhw1;
-GRANT CREATE TABLE TO jhw1;
-GRANT CREATE SEQUENCE TO jhw1;
-```
-
-### 3. 테이블 생성
-`sqls/banksystem.sql` 파일을 실행하여 테이블을 생성하세요:
-```bash
-sqlplus jhw1/1234@localhost:1521/orcl @sqls/banksystem.sql
-```
-
-### 4. 연결 정보 수정
-`BankSystem.java` 파일에서 데이터베이스 연결 정보를 수정하세요:
-```java
-conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/orcl", "jhw1", "1234");
-```
-
-## 📖 사용법
+## 사용법
 
 ### 1. 시스템 시작
 ```bash
@@ -181,18 +117,18 @@ java -cp "bin:lib/*" banksystem.BankSystem
 
 ### 3. 사용자 로그인 후 메뉴
 ```
-✅ 계좌관리    ✅ 거래업무    ✅ 기타설정    ✅ 시스템
-1. 계좌생성    4. 입금       8. 계좌비밀번호변경   10. 로그아웃
-2. 계좌조회    5. 출금       9. 회원정보수정     0. 종료
-3. 계좌해지    6. 이체
-              7. 거래내역조회
+✅ 계좌관리    ✅ 거래업무    ✅ 기타설정          ✅ 시스템
+1. 계좌생성     4. 입금        8. 계좌비밀번호변경   10. 로그아웃
+2. 계좌조회     5. 출금        9. 회원정보수정        0. 종료
+3. 계좌해지     6. 이체
+                7. 거래내역조회
 ```
 
 ### 4. 관리자 로그인 후 메뉴
 ```
-✅ 계좌관리        ✅ 이자관리        ✅ 시스템관리        ✅ 기타
-1. 전체계좌조회    3. 수동이자지급    5. 스케줄러상태      6. 로그아웃
-2. 사용자별계좌조회 4. 이자지급내역조회 0. 종료
+✅ 계좌관리         ✅ 이자관리         ✅ 시스템관리        ✅ 기타
+1. 전체계좌조회      3. 수동이자지급      5. 스케줄러상태      6. 로그아웃
+2. 사용자별계좌조회  4. 이자지급내역조회  0. 종료
 ```
 
 ## 📁 프로젝트 구조
@@ -230,8 +166,6 @@ BankSystemProject/
 └── LICENSE                        # 라이선스
 ```
 
-## 📚 API 문서
-
 ### 주요 클래스
 
 #### BankSystem
@@ -264,31 +198,7 @@ BankSystemProject/
 - `executeInterestPayment()` - 이자 지급
 - `viewInterestHistory()` - 이자 지급 내역 조회
 
-## 🤝 기여하기
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### 기여 가이드라인
-- 코드 스타일은 Java 표준 컨벤션을 따릅니다
-- 새로운 기능 추가 시 테스트 코드를 포함해주세요
-- 커밋 메시지는 명확하고 간결하게 작성해주세요
-
-## 📄 라이선스
+## 라이선스
 
 이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
 
-## 📞 연락처
-
-프로젝트 링크: [https://github.com/yourusername/bank-system](https://github.com/yourusername/bank-system)
-
-## 🙏 감사의 말
-
-이 프로젝트는 교육 목적으로 개발되었으며, 실제 은행 시스템의 복잡성을 이해하는 데 도움이 되기를 바랍니다.
-
----
-
-⭐ 이 프로젝트가 도움이 되었다면 Star를 눌러주세요!
